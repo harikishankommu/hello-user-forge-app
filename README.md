@@ -1,27 +1,36 @@
-# Hello User App for Confluence
+# Forge Hello World
 
-This is a beginner-level Forge app that displays a personalized greeting using the current user's Confluence account information.
+This project contains a Forge app written in Javascript that displays `Hello World!` in a Confluence macro. 
 
-## 🛠 Built With
-- Atlassian Forge
-- UI Kit
-- JavaScript
-- Atlassian Confluence REST API
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
-## 🚀 What It Does
-- Uses Atlassian’s product bridge API and `invoke()` method.
-- Calls backend resolver to fetch the current user's name.
-- Displays: **Hello, [Username]** in the Confluence UI.
+## Requirements
 
-## 📚 What I Learned
-- How to set up and deploy a Forge app.
-- How to connect frontend (UI Kit) with backend (resolver).
-- How to call Confluence REST APIs securely.
+See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
-## 🔮 What's Next
-- Add more features like listing user’s spaces or recent activity.
-- Style the UI and add more interaction.
+## Quick start
 
-## 📸 Screenshot
-![Screenshot 2025-06-24 105334](https://github.com/user-attachments/assets/3a12f3bf-c430-4cce-a6c7-a933529d83d0)
-💡 Developed for the Atlassian Forge Quest challenge.
+- Modify your app frontend by editing the `src/frontend/index.jsx` file.
+
+- Modify your app backend by editing the `src/resolvers/index.js` file to define resolver functions. See [Forge resolvers](https://developer.atlassian.com/platform/forge/runtime-reference/custom-ui-resolver/) for documentation on resolver functions.
+
+- Build and deploy your app by running:
+```
+forge deploy
+```
+
+- Install your app in an Atlassian site by running:
+```
+forge install
+```
+
+- Develop your app by running `forge tunnel` to proxy invocations locally:
+```
+forge tunnel
+```
+
+### Notes
+- Use the `forge deploy` command when you want to persist code changes.
+- Use the `forge install` command when you want to install the app on a new site.
+- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
+
